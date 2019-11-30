@@ -1,0 +1,17 @@
+{
+    "name": "logger",
+    "version": "1.0.1",
+    "description": "An simple logger",
+    
+    "homepage": "https://github.com/hardx4/logger",   
+    "license": "GPL-2.0",
+    "author": "Hardx4",    
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/hardx4/logger.git"
+    },    
+    "engines": {
+        "node": ">=10.0"
+    }
+}
