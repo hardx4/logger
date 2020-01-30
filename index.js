@@ -7,6 +7,28 @@ var clc = require('cli-color');
 /**
  * Initialize log system
  **/
+
+var defaultConfs = {
+    "logging": {
+        "files": {
+            "level": "info",
+            "directory": "logs",
+            "flushInterval": 5
+        },
+        "console": {
+            "level": "info",
+            "colors": true
+        }
+    }
+}
+
+if(typeof config == "undefined"){
+    var config = {}
+    config.logging = defaultConfs.logging
+}else if(typeof config.logging == "undefined"){
+    var config = {}
+    config.logging = defaultConfs.logging
+}
  
 // Set CLI colors
 var severityMap = {
