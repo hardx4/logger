@@ -10,10 +10,10 @@ var clc = require('cli-color');
 
 var defaultConfs = {
     "logging": {
+        "dirname": "logs",
+        "flushInterval": 5,
         "files": {
-            "level": "info",
-            "directory": "logs",
-            "flushInterval": 5
+            "level": "info"            
         },
         "console": {
             "level": "info",
@@ -41,7 +41,7 @@ var severityMap = {
 var severityLevels = ['info', 'warn', 'error'];
 
 // Set log directory
-var logDir = config.logging.files.directory;
+var logDir = config.logging.dirname;
 
 // Create log directory if not exists
 if (!fs.existsSync(logDir)){
@@ -69,7 +69,7 @@ setInterval(function(){
         });
         delete pendingWrites[fileName];
     }
-}, config.logging.files.flushInterval * 1000);
+}, config.logging.flushInterval * 1000);
 
 /**
  * Add new log entry
